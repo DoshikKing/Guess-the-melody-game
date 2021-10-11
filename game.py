@@ -1,5 +1,16 @@
 import pygame
+import os
+from random import randint
 
+def get_songs():
+    files = os.listdir("./")
+    songs = filter(lambda x: x.endswith('.mp3'), files)
+    return songs
+
+def get_random_song():
+    songs = get_songs()
+    random_number = randint(0, len(songs))
+    return songs[random_number]
 
 def start_game():
     pygame.init()
@@ -11,6 +22,7 @@ def start_game():
     pygame.quit()
 
 def menu(num):
+    print("input: ")
     result = 0
     if(num == 2):
         result == 1
