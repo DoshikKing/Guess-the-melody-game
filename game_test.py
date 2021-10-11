@@ -16,5 +16,9 @@ class TestGame(unittest.TestCase):
         self.assertEqual(result, "Good")
 
     def test_get_random_song(self):
-        result = game.start_game()
+        result = game.get_random_song()
         self.assertEqual(result, "song.mp3")
+
+    def test_get_songs(self):
+        result = game.get_songs()
+        self.assertEqual(result, ["vanila.mp3","song.mp3"])
