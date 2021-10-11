@@ -41,14 +41,15 @@ def start_game():
             pygame.quit()
             return "Bad" 
 
-def menu(num):
+def menu():
+    num = str(input())
     print("You choosed: " + num)
-    start_game()
-    if(num == 1):
-        return 0
-    if(num == 2):
-        return 1
+    if(num == "1"):
+        start_game()
+        return "0"
+    if(num == "2"):
+        return "1"
 
 
 print("Welcome to guess the melody game!\nChoose one of the options below!\n(1) - start the game, (2) - quit the game")
-menu(input())
+menu()
