@@ -7,7 +7,9 @@ def get_var():
     if(songs == None):
         return "ERROR!"
     else:
-        print("Guess the song!\nVarients:\n" + str(songs))
+        print("Guess the song!\nVarients:")
+        for key in (list(map("\n".__add__, songs))):
+            print(key)
         num = input("Song? ")
         return songs[int(num)]
 
