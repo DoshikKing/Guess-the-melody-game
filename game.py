@@ -1,7 +1,14 @@
 import pygame
 
 
-
+def start_game():
+    pygame.init()
+    song = pygame.mixer.Sound(get_random_song())
+    clock = pygame.time.Clock()
+    song.play()
+    while True:
+        clock.tick(20)
+    pygame.quit()
 
 def menu(num):
     result = 0
