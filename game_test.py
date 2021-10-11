@@ -3,12 +3,9 @@ from unittest import result
 import game
 
 class TestGame(unittest.TestCase):
-    def test_menu_a(self):
+    def test_menu(self):
         result = game.menu(1)
         self.assertEqual(result, 0)
-    
-    def test_menu_b(self):
-        result = game.menu(2)
         self.assertEqual(result, 1)
 
     def test_start_game(self):
@@ -21,4 +18,8 @@ class TestGame(unittest.TestCase):
 
     def test_get_songs(self):
         result = game.get_songs()
-        self.assertEqual(result, ["vanila.mp3","song.mp3"])
+        self.assertEqual(result, ["song.mp3"])
+
+    def test_get_variants(self):
+        result = game.get_var()
+        self.assertEqual(result, "song.mp3")
