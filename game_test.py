@@ -4,9 +4,8 @@ import game
 
 class TestGame(unittest.TestCase):
     def test_menu(self):
-        result = game.menu(1)
-        self.assertEqual(result, 0)
-        self.assertEqual(result, 1)
+        result = game.menu()
+        self.assertEqual(result, "0")
 
     def test_start_game(self):
         result = game.start_game()
